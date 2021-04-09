@@ -86,40 +86,24 @@ const posts = [
 //     console.log(btn)
 // }
 
-function objects() {
-    const app = document.getElementById('app')
-    app.innerHTML = ''
-    for(let i = 0; i < posts.length; i++){
-        let par = document.createElement('p')
-        par.innerText = posts[i].autor + ' ' + posts[i].tytul
-        app.appendChild(par)
-    }
-}
-
-// function search() {
-//     const valueInput = event.target.value
-//     valueInput.trim()
+// function objects() {
 //     const app = document.getElementById('app')
-//     app.innerHTML = ' '
-//     const postsFilter = posts.filter(post => {
-//         return (post.tytul.search(valueInput) !== -1)
-//     })
-    
-    
-    
-    
-    
-//     console.log(app)
-//     for (let i = 0; i < posts.length; i++){
-        
+//     app.innerHTML = ''
+//     for(let i = 0; i < posts.length; i++){
 //         let par = document.createElement('p')
-//         par.setAttribute('class', 'post')
 //         par.innerText = posts[i].autor + ' ' + posts[i].tytul
 //         app.appendChild(par)
-//         }
 //     }
-//     }
+// }
 
+const app = document.getElementById('app')
+    app.innerHTML = ''
+    for(let i = 0; i < posts.length; i++){
+        let paragraf = document.createElement('p')
+        paragraf.setAttribute('class', 'post')
+        paragraf.innerText = posts[i].autor + " " + posts[i].tytul
+        app.appendChild(paragraf)
+    }
 function search() {
     const valueInput = event.target.value
     valueInput.trim()
@@ -128,10 +112,8 @@ function search() {
     const postsFilter = posts.filter(post => {
       return (post.tytul.search(valueInput) !== -1)
     })
-  
-  
+
     for (let i = 0; i < postsFilter.length; i++) {
-  
       let paragraf = document.createElement('p')
       paragraf.setAttribute('class', 'post')
       paragraf.innerText = postsFilter[i].autor + " " + postsFilter[i].tytul
