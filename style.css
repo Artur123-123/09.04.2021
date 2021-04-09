@@ -1,0 +1,18 @@
+body {
+    background-color: rgb(163, 142, 223);
+}
+
+.wyglad {
+    background-color: rgb(194, 146, 204);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    font-size: small;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.div {
+    margin-top: 5%;
+}
